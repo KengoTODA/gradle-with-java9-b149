@@ -8,4 +8,4 @@ before_script:
   - docker build -t gradle-with-java9 .
 
 script:
-  - docker run -it -v $(pwd):/gradle -w /gradle gradle-with-java9 ./gradlew tasks --debug
+  - docker run -it -v $(pwd):/gradle -w /gradle gradle-with-java9 ./gradlew tasks --debug --no-daemon
