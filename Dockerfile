@@ -9,7 +9,7 @@ RUN echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true 
 
 RUN add-apt-repository ppa:webupd8team/java && \
     apt-get update && \
-    apt-get install -y --no-install-recommends oracle-java9-installer=9b149+9b149arm-1~webupd8~0 && \
+    apt-get install -y --no-install-recommends oracle-java9-installer=9b149+9b149arm-1~webupd8~0 oracle-java9-set-default && \
     rm -rf /var/cache/oracle-jdk9-installer
 
 # this was needless for Java9 b140, but necessary from Java9 b149
